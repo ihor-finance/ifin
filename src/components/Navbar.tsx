@@ -23,17 +23,17 @@ const Navbar: FC = () => {
       <div className="container">
         <div className="navbar-wrapper">
           <h3 className="navbar__logo">
-            {"< "}Nikita<span className="navbar__logo--dark">Isay</span>{" />"}
+            Ihor<span className="navbar__logo--dark">Finance</span>
           </h3>
           <ul className="navbar-menu">
             <li className="navbar-menu__route">
               <Link to="/">
-                <p className={linkClassname("/")}>Blog</p>
+                <p className={linkClassname("/")}>Блог</p>
               </Link>
             </li>
             <li className="navbar-menu__route">
               <Link to="/about_me">
-                <p className={linkClassname("/about_me")}>About me</p>
+                <p className={linkClassname("/about_me")}>Про мене</p>
               </Link>
             </li>
           </ul>

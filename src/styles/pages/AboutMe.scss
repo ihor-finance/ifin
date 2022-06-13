@@ -25,11 +25,9 @@
     position: relative;
   }
 
-  &__photo {
-    max-width: 220px;
-    border-radius: 50%;
-    margin-right: 30px;
-    min-height: 220px;
+  &__quote {
+    margin-bottom: 80px;
+    text-align: center;
   }
 
   &__info {
@@ -42,6 +40,9 @@
     align-items: center;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__social {

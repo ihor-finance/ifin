@@ -3,13 +3,12 @@ import { FC, PropsWithChildren } from "react";
 import { ReactComponent as LinkIcon } from "../assets/images/link_icon.svg";
 
 type ExperienceCardProps = {
-  logo: JSX.Element,
+  logo: string,
   from: string,
   till: string,
   title: string,
   position: string,
   link: string,
-  stack: string[]
 }
 
 const ExperienceCard: FC<PropsWithChildren<ExperienceCardProps>> = ({ 
@@ -18,14 +17,13 @@ const ExperienceCard: FC<PropsWithChildren<ExperienceCardProps>> = ({
   from, 
   till, 
   position,
-  stack,
   children,
   link
 }) => {
   return (
     <div className="experience-card">
       <div className="experience-card__logo">
-        {logo}
+        <img src={logo} alt={title} />
       </div>
       <div className="experience-card__info">
         <a className="experience-card__company" href={link} target="_blank" rel="noreferrer">
@@ -33,12 +31,9 @@ const ExperienceCard: FC<PropsWithChildren<ExperienceCardProps>> = ({
         </a>
         <p className="experience-card__position">{position}</p>
         <p className="experience-card__working-period">
-          from {from} till {till}
+          З {from} по {till}
         </p>
         <p className="experience-card__description">{children}</p>
-        <div className="experience-card__stack">
-          {stack.map((technology) => <p key={technology}>{technology}</p>)}
-        </div>
       </div>
     </div>
   );

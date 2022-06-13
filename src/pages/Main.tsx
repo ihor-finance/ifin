@@ -2,7 +2,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import lottie from "lottie-web";
 import { Entry } from "contentful";
 
-import animationData from "../assets/lottie/programmer.json";
+import animationData from "../assets/lottie/trader.json";
 
 import ContentBlock from "../components/ContentBlock";
 import ArticlePreview from "../components/ArticlePreview";
@@ -50,17 +50,16 @@ const Main: FC = () => {
             <div className="main-first-screen__animation" ref={animationContainer}></div>
             <div className="main-first-screen__texts">
               <div className="main-first-screen__phrase">
-                Hi! My name is <span className="highlighted">Nikita Isay</span>, 
-                I am a tech person with experience in software development.
+                Привіт! Мене звати <span className="highlighted">Ігор</span>, 
+                я фінансист з певним досвідом роботи.
               </div>
               <div className="main-first-screen__phrase">
-                I&#39;m interested in <span className="highlighted">front-end</span>, <span className="highlighted"> back-end </span> 
-                development and <span className="highlighted"> blockchain</span> technologies.
-                I really serious about creating useful and scalable software products, powered by modern technologies.
+                Мене цікавлять трейдінг, інвестиції, алгоритмічна торгівля на базі machine learn,
+                Blockchain технології та Python. Я багато чого не вмію з вище перерахованого, але для
+                цього цей сайт і був створений, на кшталт <span className="highlighted">конспекта</span>.
               </div>
               <div className="main-first-screen__phrase">
-                This is my personal blog where I share my knowledges with everyone who 
-                also interested in software development.
+                Це мій особистий блог, де я буду ділитися своїм знаннямі з усіма, кому також цікава сфера фінансів
               </div>
             </div>
           </div>
@@ -69,16 +68,15 @@ const Main: FC = () => {
       <div className="main-content-block">
         <ContentBlock>
           <p>
-          One of my qualities is a strong desire to learn.
-          Personal development is about challenging yourself. 
-          You can never see any improvements if you stick to your comfort zone. 
-          If you stop growing, you drown.
+          Однією з моїх якостей є сильне бажання вчитися. Особистий розвиток - це кидати
+          собі виклик. Ви ніколи не побачите жодних покращень, якщо будете дотримуватися
+          зони комфорту. Якщо ви перестанете рости, ви потонете.
           </p>
         </ContentBlock>
       </div>
       <section className="main-blog">
         <div className="container">
-          <h2 className="main-blog__title underlined">Blog</h2>
+          <h2 className="main-blog__title underlined">Блог</h2>
           <ul className="main-blog-articles-list">
             {previews.map((preview) => (
               <li className="main-blog-articles-list__article" key={preview.sys.id}>

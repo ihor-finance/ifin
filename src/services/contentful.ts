@@ -4,7 +4,7 @@ import { Article, ArticlePreview } from "../types";
 class ContentfulService {
   private client: contentful.ContentfulClientApi;
 
-  constructor(space: string, accessToken: string) {
+  constructor(space = "", accessToken = "") {
     this.client = contentful.createClient({
       space: space,
       accessToken: accessToken
