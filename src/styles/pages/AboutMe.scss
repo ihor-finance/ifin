@@ -27,12 +27,17 @@
 
   &__quote {
     margin-bottom: 80px;
-    text-align: center;
   }
 
   &__info {
     display: flex;
-    flex-direction: column;
+
+    img {
+      max-width: 250px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: 50px;
+    }
   }
 
   &__socials {
@@ -40,9 +45,10 @@
     align-items: center;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   &__social {
@@ -99,6 +105,15 @@
       padding: 0;
     }
 
+    &__info {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin: 0 0 30px;
+      }
+    }
+
     &__wrapper {
       flex-direction: column;
       align-items: center;
@@ -114,11 +129,15 @@
 
     &__quote {
       text-align: center;
+      margin-bottom: 20px;
     }
 
     &__socials { 
       position: relative;
       justify-content: center;
+      transform: none;
+      flex-wrap: wrap;
+      left: 0;
     }
   }
 }
